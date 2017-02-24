@@ -30,7 +30,8 @@ function onButtonClick() {
 function validateName(_evt){
     
     var mensajeName = $("#mensajeName");
-    var textoNombre = "<h5 style='color:#FF1493';>Debe ingresar su nombre</h5>";
+    var textoNombre = "<br><h5 class='text-center'  style='color:#fe3ecd; background-color:	#F5F5F5; padding:10px; font-weight:bold';>Debe ingresar su nombre</h5>";
+    
     var textoNumero = "<h5 style='color:#FF1493';>Los números no son válidos</h5>";
  
     
@@ -51,7 +52,7 @@ function validateName(_evt){
 function validateEmail(_evt){
     
     var mensajeEmail = $("#mensajeEmail");
-    var textoEmail = "<h5 style='color:#FF1493';>Correo Electrónico Inválido, debe contener ejemplo: hola@dominio.com</h5>";
+    var textoEmail =  "<br><h5 class='text-center'  style='color:#fe3ecd; background-color:	#F5F5F5; padding:10px; font-weight:bold';>Correo Electrónico Inválido, debe contener ejemplo: hola@dominio.com</h5>"
 
     if(/([a-zA-Z0-9(-_.)]+[@][a-zA-Z0-9]+[.][a-zA-Z]+)/g.test(emailX.val())){
         mensajeEmail.html(""); 
