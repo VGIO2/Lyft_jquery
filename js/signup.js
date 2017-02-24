@@ -19,7 +19,7 @@ function onButtonClick() {
     
     if(nombre.val() == '' || emailX.val() == '' || checkInput.checked == false) {
         
-        mensajeCheck.html("<br><h5 class='text-center' style='color:#FF1493';>Debe completar todo el formulario</h5>");
+        mensajeCheck.html("<br><h5 class='text-center'  style='color:#fe3ecd; background-color:	#F5F5F5; padding:10px; font-weight:bold';>Debe completar todo el formulario</h5>");
     } else {
         
         mensajeCheck.html("");

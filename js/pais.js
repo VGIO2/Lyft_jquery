@@ -3,11 +3,14 @@ var inputNumber = $("#number");
 function init() {
     
     var imgFlag = $("#peruFlag");
-    var select = localStorage.getItem('country_select'); 
+    var codeCountry = $("#codeCountry");
+    var select = localStorage.getItem('country_select');
+    var country_code = paises[select].phone_code;
     var country_url = paises[select].imageURL;
     
     //.prop()
     imgFlag.attr("src", country_url);
+    codeCountry.text(country_code);
     
     var button = $("#next");
     button.click(onButtonClick);
@@ -20,7 +23,7 @@ function onButtonClick() {
     var mensajeNumber = $("#mensajeNumber");
     
     if(inputNumber.val() == '') {
-        mensajeNumber.html("<br><h5 class='text-center' style='color:#FF1493';>Debes escribir tu número telefónico</h5>"); 
+        mensajeNumber.html("<br><h5 class='text-center'  style='color:#fe3ecd; background-color:	#F5F5F5; padding:10px; font-weight:bold';>Debe escribir su número telefónico</h5>"); 
     } else {
         mensajeNumber.empty();
         onCode();
