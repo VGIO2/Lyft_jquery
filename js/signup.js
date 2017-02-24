@@ -1,64 +1,63 @@
-var nombre = document.getElementById("name");
-var emailX = document.getElementById("email");
-var checkInput = document.getElementById("check"); 
-var mensajeCheck = document.getElementById("mensajeCheck");
-
+var nombre = $("#name");
+var emailX = $("#email");
+var checkInput = $("#check"); 
+var mensajeCheck = $("#mensajeCheck");
 
 function init(){
-    var button = document.getElementById("next");
-    button.addEventListener('click',onButtonClick);
-    nombre.value = '';
-    emailX.value = '';
-    checkInput.checked = false;
+    var button = $("#next");
+    button.click(onButtonClick);
+    nombre.val("");
+    emailX.val("");
+    checkInput.prop( "checked" );
 }
 
 function onButtonClick() {
-    var inputName = document.getElementById("name");
-    localStorage.setItem('Name', inputName.value);
-    var inputEmail = document.getElementById("email");
-    localStorage.setItem('Email', inputEmail.value);
+    var inputName = $("#name");
+    localStorage.setItem('Name', inputName.val());
+    var inputEmail = $("#email");
+    localStorage.setItem('Email', inputEmail.val());
     
-    if(nombre.value == '' || emailX.value == '' || checkInput.checked == false) {
-        mensajeCheck.innerHTML = "<br><h5 class='text-center' style='color:#FF1493';>Debe completar todo el formulario</h5>"
+    if(nombre.val() == '' || emailX.val() == '' || checkInput.checked == false) {
+        
+        mensajeCheck.html("<br><h5 class='text-center' style='color:#FF1493';>Debe completar todo el formulario</h5>");
     } else {
-        mensajeCheck.innerHTML = '';
+        
+        mensajeCheck.html("");
         location.href = 'mapa.html';
     }
 }
-
 //VALIDAR NOMBRE
 function validateName(_evt){
     
-    var mensajeName = document.getElementById("mensajeName");
+    var mensajeName = $("#mensajeName");
     var textoNombre = "<h5 style='color:#FF1493';>Debe ingresar su nombre</h5>";
     var textoNumero = "<h5 style='color:#FF1493';>Los números no son válidos</h5>";
  
     
-    if(nombre.value!=""){
+    if(nombre.val() !=""){
        
-        nombre.value = convertirMayus(nombre.value);
+        nombre.val(convertirMayus(nombre.val()));
         
-        if(/([0-9])/g.test(nombre.value)){
-            mensajeName.innerHTML=textoNumero;
+        if(/([0-9])/g.test(nombre.val())){
+            mensajeName.html(textoNumero);
         } else {
-            mensajeName.innerHTML='';
+            mensajeName.html("");
         }
     } else {
-        mensajeName.innerHTML=textoNombre;
+        mensajeName.html(textoNombre);
     }    
 }
-
 //VALIDAR EMAIL
 function validateEmail(_evt){
     
-    var mensajeEmail = document.getElementById("mensajeEmail");
+    var mensajeEmail = $("#mensajeEmail");
     var textoEmail = "<h5 style='color:#FF1493';>Correo Electrónico Inválido, debe contener ejemplo: hola@dominio.com</h5>";
 
-    if(/([a-zA-Z0-9(-_.)]+[@][a-zA-Z0-9]+[.][a-zA-Z]+)/g.test(emailX.value)){
-        mensajeEmail.innerHTML = ''; 
+    if(/([a-zA-Z0-9(-_.)]+[@][a-zA-Z0-9]+[.][a-zA-Z]+)/g.test(emailX.val())){
+        mensajeEmail.html(""); 
     } else {
-        if(emailX.value.length >= 0){
-            mensajeEmail.innerHTML = textoEmail;   
+        if(emailX.val().length >= 0){
+            mensajeEmail.html(textoEmail);   
         }
     }
 }
@@ -84,10 +83,10 @@ function convertirMayus(texto){
     
     return mayuscula;
 }
-
-function onCheck(evt){   
     
-    if(checkInput.checked==true){
+function onCheck(){   
+    
+    if(checkInput.checked){
         return true;
     } else {
         return false;

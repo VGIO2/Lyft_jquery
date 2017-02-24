@@ -30,19 +30,20 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="inner">
-                        <input class="form-control" onkeyup="validateName(event)" id="name" type="text" placeholder="First name        Last name"/>
+                        <input class="form-control" onkeyup="validateName(event)" onchange="validateName(event)" id="name" type="text" placeholder="First name        Last name"/>
                         <i class="glyphicon glyphicon-user"></i>
                     </div>
                     <div id="mensajeName"></div>
                     <br>
                     <div class="inner">
-                        <input class="form-control" onkeyup="validateEmail(event)" id="email" type="text" placeholder="Email"/>
+                        <input class="form-control" onkeyup="validateEmail(event)"
+                        onchange="validateEmail(event)" id="email" type="text" placeholder="Email"/>
                          <i class="glyphicon glyphicon-envelope"></i>
                     </div>
                     <div id="mensajeEmail"></div>
                     <br>
                     <div class="text-center">
-                        <input id="check" onchange="onCheck(event)" class="check" type="checkbox">
+                        <input id="check"  onchange="onCheck()" class="check" type="checkbox">
                         <span>I agree to Lyft´s 
                             <span class="blue-text">Terms of Service</span>
                         </span>                        
@@ -54,5 +55,6 @@
     </section>
     <a type="button" id="next" class="btn btn-next">Next</a>
     
+    <script src="js/jquery-3.1.1.js"></script>  
     <script src="js/signup.js"></script>
 </body>

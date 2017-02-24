@@ -1,40 +1,62 @@
 function init(){
     createList();
-    var listaPaises = document.getElementsByTagName("li");
-    for(var i=0; i<listaPaises.length; i++){
-        listaPaises[i].addEventListener("click",onCountryClick);
-    }
+    var listaPaises = $("li"); 
     
+    console.log(typeof listaPaises);
+  
+    listaPaises.each(function(){
+        //console.log($(this).find("img").attr("src")); 
+        $(this).click(onCountryClick);
+    });
 }
 
 function createList() {
-    var elListCountries = document.getElementById("list-countries");
+    var elListCountries = $("#list-countries");
     for(var i in paises){
         var listHtml= 
             '<li id="' + i + '">'+
                 '<img class="img-size" src="'+ paises[i].imageURL +'" alt=""><p class="country-name">'+ paises[i].nombre +'</p> <span><strong>+'+ paises[i].phone_code +'</strong></span>'+
             '<hr></li>';
-        elListCountries.innerHTML += listHtml;
+        
+        elListCountries.append(listHtml); 
     }
 }
 
 function onCountryClick(evt) {
     localStorage.setItem("country_select",evt.currentTarget.id);
-    
     location.href="pais.html";
 }
 
+$(document).ready(function () {
+ 
+            (function ($) {
+ 
+                $('#search').keyup(function () {
+ 
+                    var rex = new RegExp($(this).val(), 'i');
+                    $('li').hide();
+                    $('li').filter(function () {
+                        return rex.test($(this).text());
+                    }).show();
+ 
+                })
+ 
+            }(jQuery));
+});
 
 
+
+
+
+/*
 // ----------------------------------------------- BUSCADOR
-var search = document.getElementById("search");
-var ulListCountries = document.getElementById("list-countries");
-
-var contacto = ulListCountries.getElementsByClassName("country-name");
+var search = $("#search");
+var ulListCountries = $("#list-countries");
+//var contacto = ulListCountries.getElementsByClassName("country-name");
+var contacto = ulListCountries.filter(".country-name");
 var forEach = Array.prototype.forEach;
-
-search.addEventListener("keyup", function(e){
-   var choice = this.value;
+search.keyup(function(e){
+   var choice = this.val();
  
    forEach.call(contacto, function(f){
        
@@ -45,3 +67,4 @@ search.addEventListener("keyup", function(e){
    });
 }, 
 false);
+*/
