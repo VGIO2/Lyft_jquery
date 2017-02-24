@@ -1,27 +1,28 @@
-var inputNumber = document.getElementById("number");
+var inputNumber = $("#number");
 
-function init2() {
+function init() {
     
-    var imgFlag = document.getElementById("peruFlag");
+    var imgFlag = $("#peruFlag");
     var select = localStorage.getItem('country_select'); 
     var country_url = paises[select].imageURL;
     
-    imgFlag.src = country_url;
+    //.prop()
+    imgFlag.attr("src", country_url);
     
-    var button = document.getElementById("next");
-    button.addEventListener('click',onButtonClick);
+    var button = $("#next");
+    button.click(onButtonClick);
 }
 
 function onButtonClick() {
     
-    localStorage.setItem('Number', inputNumber.value);
+    localStorage.setItem('Number', inputNumber.val());
     
-    var mensajeNumber = document.getElementById("mensajeNumber");
+    var mensajeNumber = $("#mensajeNumber");
     
-    if(inputNumber.value == '') {
-        mensajeNumber.innerHTML = "<br><h5 class='text-center' style='color:#FF1493';>Debes escribir tu número telefónico</h5>"
+    if(inputNumber.val() == '') {
+        mensajeNumber.html("<br><h5 class='text-center' style='color:#FF1493';>Debes escribir tu número telefónico</h5>"); 
     } else {
-        mensajeNumber.innerHTML = '';
+        mensajeNumber.empty();
         onCode();
         location.href = 'signup.html';
     }    
@@ -47,4 +48,5 @@ function validateNumber(_evt){
         _evt.preventDefault();
     }     
 } 
+
 
