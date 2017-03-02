@@ -7,15 +7,25 @@
     position: absolute;
     bottom:0;
 }
-#car-list {
+#car-list, #direction{
     width: 70%;
     list-style: none;
     background: #fff;
     position: absolute;
     margin: 0;
-    bottom: 110px;
+    bottom: 170px;
     margin-left: 5px;
     padding: 0;
     border-radius: 10px;
     display: block;
+}
+#direction{
+    bottom: 110px;
+}
+#location-icono{
+    border-radius: 100%;
+    border: 2px solid black;
+    padding: 1%;
+    margin-left: 5%;
+    margin-top: 3%;
 }

@@ -15,12 +15,12 @@
     <div id="lista-carros">
        <ul id="car-list">
            <li>
-               <div class="row">
-                   <div class="col-xs-2 left"><img src="image/taxi_1.png" alt=""></div>
+               <div class="row pos-tax">
+                   <div class="col-xs-3"><img src="image/taxi_1.png" alt=""></div>
                    <div class="col-xs-7">
-                       <p>Line<small> <br>Shared,2 riders max</small></p>
+                       <p>Line <br><small>Shared,2 riders max</small></p>
                    </div>
-                   <div class="col-xs-3"><p>3 min</p></div>
+                   <div class="col-xs-2">3 min</div>
                </div>
            </li>
            
@@ -32,11 +32,22 @@
     </div>
     
     
-    <a id="next-d" class="btn btn-next">San Francisco st.</a>
+    
+    
+    <div id="direction">
+       <div class="row">
+          <div id="flecha" class="col-xs-5">
+            <i id="location-icono" class="glyphicon glyphicon-menu-down" ></i>
+          </div>
+          <div>
+             <p class="col-xs-7">2300 Harrison St <br><small>Pickup location</small></p>
+          </div>
+        </div>
+        
+        
+    </div>
     
     <a id="next" class="btn btn-next">Set Pickup</a>
-    
-    
     
     <script src="js/jquery-3.1.1.js"></script> 
     <script src="js/app.js"></script>

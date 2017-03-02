@@ -1,6 +1,14 @@
 function init(){
     
+    $('#direction').click(iconClick);
 }
+
+function iconClick() {
+    $("#car-list").toggle();
+}
+
+
+
 
 var map;
 
