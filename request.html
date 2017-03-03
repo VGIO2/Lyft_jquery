@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lyft</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet icon" href="image/descarga.png">
+    <link rel="stylesheet" href="css/request.css">
+</head>
+<body onload="init()">
+    <div id="map" style="height:600px"></div>
+    
+<!-----------------------------------------------PRECIOS----->
+    <div class="container">
+	 	
+		<div class="dropup" id="select">
+		<div class="container">
+	 	   <span class="glyphicon glyphicon-arrow-left pull-left icons"></span> 
+	 	   <span class="glyphicon glyphicon-send pull-right icons"></span>
+	 	</div>
+	 	
+			<div class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="width:100%" id="btn-select">
+                <div class="container top">
+                   <div class="row">
+                       <div class="col-xs-5 col-sm-5 col-md-5 text-right">
+                           <img src="imagenes/audi_PNG1752.png" style="width:45%"  alt="" class="selectCar">
+                       </div>
+                       <div class="col-xs-7 col-sm-7 col-md-7 text-left">
+                           <h5>Lyft <small><br>Fast rides - 4 seats</small></h5>
+                       </div>
+                   </div>
+                </div>
+			    <div class="container">
+			        <div class="row select-center">
+                        <div class="col-xs-6 col-sm-6 col-md-6 text-center border-right ">
+                            <div class=" img-card">
+                                <img class="img-responsive mastercard" src="imagenes/640px-MasterCard_logo.png" alt="">
+                                <h5 class="mastercard-text">Personal
+                                <small><br>Payment</small></h5>    
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 text-center pad">
+                            <div class="">
+                                <h5>$6-12
+                                <small><br>Price estimate</small></h5>
+                            </div>
+                        </div>
+                   </div>
+			        <div class="container">
+                        <div class="pull-left">
+                             <span class="glyphicon glyphicon-stop lila"></span>2300 Harrison St
+                        </div>
+                        <br>
+                        <div class="pull-left">
+                             <span class="glyphicon glyphicon-stop pink"></span>Caltrain station
+                        </div>
+			        </div>
+			 </div>
+           </div>
+        </div>
+    </div>
+           
+		
+<!--------------------------------------------- BOTON AZUL---->
+       
+    <a id="next" class="btn btn-next">Request Lyft</a>
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="js/request.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTCqoAARuw47ZDf2wg7OlrkVaPnDAlNbI&callback=initMap"
+        async deser></script>
+</body>
+</html>

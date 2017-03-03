@@ -1,13 +1,12 @@
 function init(){
     
     $('#direction').click(iconClick);
+    $('#next').click(setPickup);
 }
 
 function iconClick() {
     $("#car-list").toggle();
 }
-
-
 
 
 var map;

@@ -13,14 +13,17 @@
     background: #fff;
     position: absolute;
     margin: 0;
-    bottom: 170px;
+    bottom: 110px;
     margin-left: 5px;
     padding: 0;
     border-radius: 10px;
     display: block;
 }
+
 #direction{
-    bottom: 110px;
+    bottom: 50px;
+    width: 100%;
+    
 }
 #location-icono{
     border-radius: 100%;

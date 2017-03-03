@@ -12,10 +12,11 @@
 <body onload="init()">
     <div id="map" style="height:600px"></div>
     
+<!----------------------------------------LISTA DE CARROS----->
     <div id="lista-carros">
        <ul id="car-list">
            <li>
-               <div class="row pos-tax">
+               <div class="row">
                    <div class="col-xs-3"><img src="image/taxi_1.png" alt=""></div>
                    <div class="col-xs-7">
                        <p>Line <br><small>Shared,2 riders max</small></p>
@@ -23,17 +24,27 @@
                    <div class="col-xs-2">3 min</div>
                </div>
            </li>
-           
-           <li></li>
-           <li></li>
-           <li></li>
-       </ul>
-        
+           <li>
+               <div class="row">
+                   <div class="col-xs-3"><img src="image/taxi_1.png" alt=""></div>
+                   <div class="col-xs-7">
+                       <p>Line <br><small>Shared,2 riders max</small></p>
+                   </div>
+                   <div class="col-xs-2">3 min</div>
+               </div>
+           </li>
+           <li>
+               <div class="row">
+                   <div class="col-xs-3"><img src="image/taxi_1.png" alt=""></div>
+                   <div class="col-xs-7">
+                       <p>Line <br><small>Shared,2 riders max</small></p>
+                   </div>
+                   <div class="col-xs-2">3 min</div>
+               </div>
+           </li>
+       </ul> 
     </div>
-    
-    
-    
-    
+<!-------------------------------------------UBICACION ACTUAL---->
     <div id="direction">
        <div class="row">
           <div id="flecha" class="col-xs-5">
@@ -43,13 +54,15 @@
              <p class="col-xs-7">2300 Harrison St <br><small>Pickup location</small></p>
           </div>
         </div>
-        
-        
     </div>
-    
+<!--------------------------------------------- BOTON AZUL---->
+       
     <a id="next" class="btn btn-next">Set Pickup</a>
+
+
     
-    <script src="js/jquery-3.1.1.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
     <script src="js/app.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTCqoAARuw47ZDf2wg7OlrkVaPnDAlNbI&callback=initMap"
         async deser></script>
