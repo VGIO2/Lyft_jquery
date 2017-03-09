@@ -1,3 +1,4 @@
+
 .btn-next {
     background:#1e1a8e;
     width: 100%;
@@ -7,7 +8,37 @@
     position: absolute;
     bottom:0;
 }
-#car-list, #direction{
+.container-menu{
+position: absolute;
+bottom:0px;
+ right:0px;
+ left: 0px;
+margin-bottom: 50px;
+}
+
+.dropup {
+ background-color: #fff;
+ border-radius: 5px;
+ border: 1px solid #ddd;
+ padding-top: 5px;
+}
+.dropup button {
+ margin-left: 20px;
+ border: solid 1px black;
+border-radius: 100%;
+}
+.dropup .pickup-location{
+ margin-left: 20px;
+ display: inline-block;
+ vertical-align: middle;
+}
+
+.dropup .list-car {
+ width: 85%;
+ margin-bottom: 15px;
+}
+
+/*#car-list, #direction{
     width: 70%;
     list-style: none;
     background: #fff;
@@ -31,4 +62,4 @@
     padding: 1%;
     margin-left: 5%;
     margin-top: 3%;
-}
+}*/

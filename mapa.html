@@ -12,7 +12,74 @@
 <body onload="init()">
     <div id="map" style="height:600px"></div>
     
-<!----------------------------------------LISTA DE CARROS----->
+<section class="container-menu">    
+    <div id="setPickUp">
+           <div class="dropup">
+             <button class="btn btn-group btn-default dropdown-toggle btn-circle" type="button" id="dropdownMenu2 address-group " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i id="location-icono" class="glyphicon glyphicon-menu-down" ></i>
+             </button>
+             
+             <div class="pickup-location">
+                 <span>2300 Harrison St</span><br>
+                 <small>Pickup Location</small>
+             </div>
+             <ul id="eleccion" class="dropdown-menu list-car" aria-labelledby="dropdownMenu2">
+               <li>
+                 <div class="row">
+                   <div class="col-sm-12 col-xs-12">
+                     <div class="col-sm-3 col-xs-3">
+                           <img src="image/taxi1.png" alt="">
+                     </div>
+                     <div class="col-sm-7 col-xs-7">
+                         <a href="#">Line</a><br><small>Shared, 2 riders max</small>
+                     </div>
+                     <div class="col-sm-2 col-xs-2">
+                         <span>3<br>min</span>
+                     </div>
+                   </div>
+                   <div class="col-sm-12 col-xs-12">  
+                     <div class="col-sm-3 col-xs-3">
+                         <img src="image/taxi2.png" alt="">
+                     </div>
+                     <div class="col-sm-7 col-xs-7">
+                         <a href="#">Lyft</a><br><small>4 seats</small>
+                     </div>
+                     <div class="col-sm-2 col-xs-2">
+                         <span>3<br>min</span>
+                     </div>
+                   </div >
+                   <div class="col-sm-12 col-xs-12">
+                     <div class="col-sm-3 col-xs-3">
+                         <img src="image/taxi3.png" alt="">
+                     </div>
+                     <div class="col-sm-7 col-xs-7">
+                         <a href="#">Plus</a><br><small>6 seats</small>
+                     </div>
+                     <div class="col-sm-2 col-xs-2">
+                         <span>3<br>min</span>
+                     </div>
+                   </div>  
+                   <div class="col-sm-12 col-xs-12">
+                     <div class="col-sm-3 col-xs-3">
+                     <img src="image/taxi4.png" alt="">
+                     </div>
+                     <div class="col-sm-7 col-xs-7">
+                       <a href="#">Premier</a><br><small>High-end, 4 seats</small>
+                     </div>
+                     <div class="col-sm-2 col-xs-2">
+                       <span>3<br>min</span>
+                     </div>
+                   </div>  
+                 </div>  
+               </li>
+             </ul>
+           </div>
+        </div>
+</section>   
+           
+    
+<!-----------------------------LISTA DE CARROS
+   
     <div id="lista-carros">
        <ul id="car-list">
            <li>
@@ -28,7 +95,7 @@
                <div class="row">
                    <div class="col-xs-3"><img src="image/taxi_1.png" alt=""></div>
                    <div class="col-xs-7">
-                       <p>Line <br><small>Shared,2 riders max</small></p>
+                       <p>Lyft <br><small>4 seats</small></p>
                    </div>
                    <div class="col-xs-2">3 min</div>
                </div>
@@ -37,14 +104,23 @@
                <div class="row">
                    <div class="col-xs-3"><img src="image/taxi_1.png" alt=""></div>
                    <div class="col-xs-7">
-                       <p>Line <br><small>Shared,2 riders max</small></p>
+                       <p>Plus <br><small>6 seats</small></p>
+                   </div>
+                   <div class="col-xs-2">4 min</div>
+               </div>
+           </li>
+           <li>
+               <div class="row">
+                   <div class="col-xs-3"><img src="image/taxi_1.png" alt=""></div>
+                   <div class="col-xs-7">
+                       <p>Premier<br><small>High-end, 4 seats</small></p>
                    </div>
                    <div class="col-xs-2">3 min</div>
                </div>
            </li>
        </ul> 
     </div>
-<!-------------------------------------------UBICACION ACTUAL---->
+
 <div id="direction">
        <div class="row">
           <div id="flecha" class="col-xs-5">
@@ -54,7 +130,7 @@
              <p class="col-xs-7">2300 Harrison St <br><small>Pickup location</small></p>
           </div>
         </div>
-</div>
+</div>----->
 <!--------------------------------------------- BOTON AZUL---->
        
 <a type="button"  href="request.html" id="next" class="btn btn-next">Set Pickup</a>
@@ -64,6 +140,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     
 <script src="js/app.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhb6M0dHPs3JykJIijKYTishOSsF0_KeI&callback=initMap"async deser></script>
 </body>
 </html>

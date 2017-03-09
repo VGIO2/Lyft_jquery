@@ -1,13 +1,6 @@
 function init(){
     
-    $('#direction').click(iconClick);
-    $('#next').click(setPickup);
 }
-
-function iconClick() {
-    $("#car-list").toggle();
-}
-
 
 var map;
 
@@ -51,6 +44,23 @@ function initMap() {
     pazPeru.addEventListener('click', function(){
         infowindow.open(map,pazPeru)
     })
+}
+
+function solicitarEstimado(){
+     $.ajax({
+        url: 'https://clientes.geekadvice.pe/api/estimado',
+        data:{tipo:1}
+    }).success(
+    function(_data){
+        update(_data);
+    }
+    );
+}
+function update(_info){
+    var min= _info.estimado.min;
+    var max= _info.estimado.max;
+    var precio= '$ '+min+' - '+max;
+    $('#elegido').html(precio);
 }
 
 
