@@ -1,0 +1,79 @@
+.container{
+    height: 40px;
+}
+#map{
+    height: 100%;
+    width: 100%;
+}
+.btn-next{
+	background:#ff00bf;
+	border: none;
+	padding: 13px;
+	position: absolute;
+	width: 100%;
+	border-radius: 10px;
+}
+
+#select{
+	position: relative;
+	transform: translateY(-200px);
+}
+
+.foto{
+    z-index:2;
+    position: absolute;
+    float:left;
+    left:3%;
+    top: 2%;
+    width:11%;
+    border-radius: 100%;
+    border: solid 1px #868686;
+}
+
+.top{
+    border-bottom: 1px solid #cbd8ed;
+    border: 80%;
+}
+.selectCar{
+    margin-top: 5px;
+}
+.pad{
+   border-left: 1px solid #cbd8ed;; 
+}
+.img-card{
+    margin-top: 8px;
+}
+.mastercard {
+    width: 8%;
+    display: inline;
+}
+.mastercard-text {
+    display: inline;
+}
+.select-center{
+    border-bottom: 1px solid #cbd8ed;
+}
+.lila{
+    border-radius: 100%;
+    background: #371b83;
+    color: #371b83;
+    margin-right: 8px;
+    top: 0px;
+    font-size: 8px;
+}
+.pink{
+    border-radius: 100%;
+    background: #ff00bf;
+    color: #ff00bf;
+    margin-right: 8px;
+    top: 0px;
+    font-size: 8px;
+}
+.icons{
+    transform: translateY(-8px);
+    padding: 5px;
+    border: 1px solid #676367;
+    border-radius: 100%;
+    background: #fff;
+}
+
