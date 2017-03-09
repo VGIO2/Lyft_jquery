@@ -1,0 +1,42 @@
+.header-container{
+    margin:20px;
+}
+.title{
+   margin-top: -20px; 
+}
+.lyft, card{
+    display: inline-block;
+    padding-left: -50px;
+}
+
+.cuadro img{
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+.btn-default:hover{
+    background: rgb(255,0,191);
+    color:#fff;
+}
+.payment{
+    border:solid 1px #dfe1e6;
+    border-radius: 5px;
+}
+.text{
+    display: inline-block;
+    margin-left: 8px;
+}
+.credits{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.btn-next {
+    background:#393d4e;
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 4% 1%;
+    position: absolute;
+    bottom:0;
+}
