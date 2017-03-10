@@ -15,7 +15,10 @@ bottom:0px;
  left: 0px;
 margin-bottom: 50px;
 }
-
+.car {
+    width: 100px;
+    margin-top: 38%;
+}
 .dropup {
  background-color: #fff;
  border-radius: 5px;

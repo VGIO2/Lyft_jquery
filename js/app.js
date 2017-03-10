@@ -1,11 +1,38 @@
 function init(){
     
+    createList();
+    
+    var li = $("li"); 
+    li.each(function(){
+       $(this).click(onTypeClick); 
+    });
+    
+    
+    solicitarLugar();
+    var button = $(".btn-next");
+    button.click(validateButton);
 }
 
-var cars = '[{"nombre": "Line","time":"3", "image":"image/taxi1.png", "description":"Shared, 2 riders max"},'+
-'{"nombre": "Lyft","time":"3", "image":"image/taxi2.png" , "description":"4 seats"},'+
-'{"nombre": "Plus","time":"4", "image":"image/taxi3.png", "description":"6 seats"},'+
-'{"nombre": "Premier","time":"3", "image":"image/taxi4.png", "description":"High-end, 4 seats"}]';
+var cars =[{"nombre":"Line","image":"image/taxi1.png","description":"Shared, 2 riders max","time":"3"},
+{"nombre":"Lyft","image":"image/taxi2.png","description":"4 seats","time":"3"},
+{"nombre":"Plus","image":"image/taxi3.png","description":"6 seats","time":"3"},    {"nombre":"Premier","image":"image/taxi4.png","description":"High end, 4 seats","time":"3"}]; 
+
+function createList() {
+    
+    var listCars = $("#eleccion");
+    
+    for(var i in cars){
+        var carsHtml = '<li id="'+i+'"><div class="row"><div class="col-xs-3"><img class="img-responsive car" src="'+cars[i].image+'" alt=""></div><div class="col-xs-7"><h4>'+cars[i].nombre+'</h4><small>'+cars[i].description+'</small></div><div class="col-xs-2"><h4>'+cars[i].time+'</h4><small>min</small></div></div></li>';
+        
+        listCars.append(carsHtml);
+    }
+}
+
+function onTypeClick(evt) {
+    
+    console.log(evt.currentTarget);
+    localStorage.setItem("car_select",evt.currentTarget.id);
+}
 
 var map;
 
@@ -51,26 +78,24 @@ function initMap() {
     })
 }
 
-
-
-
-function solicitarEstimado(){
-     $.ajax({
-        url: 'https://clientes.geekadvice.pe/api/estimado',
-        data:{tipo:1}
-    }).success(
-    function(_data){
-        update(_data);
-    }
-    );
+function solicitarLugar(){
+    $.ajax({
+        url:"http://clientes.geekadvice.pe/api/estimado",
+        data:{"tipo":1}
+    }).success(function(_data){
+        //console.log(_data.estimado); 
+        update1(_data);
+    });
+    
 }
-function update(_info){
-    var min= _info.estimado.min;
-    var max= _info.estimado.max;
-    var precio= '$ '+min+' - '+max;
-    $('#elegido').html(precio);
+function update1(_info){
+    $("#nowPlace").text(_info.origen);
 }
 
+function validateButton() {
+    
+    location.href="request.html";
+}
 
 
 
