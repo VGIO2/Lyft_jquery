@@ -68,24 +68,22 @@ function initMap() {
 
 
 
+
 function solicitarEstimado(){
     $.ajax({
         url:"http://clientes.geekadvice.pe/api/estimado",
         data:{"tipo":1}
     }).success(function(_data){
-        //console.log(_data.estimado); 
+        console.log(_data.estimado); 
         update1(_data);
     });
     
 }
 function update1(_info){
     $("#precio").text(_info.estimado.min);
+    $("#moneda").text(_info.estimado.moneda);
     $("#destino").text(_info.destino);
     $("#partida").text(_info.origen);
-    
-    
-    //alert(_info.destino);
-    //alert(_info.estimado.min);
 }
 
 

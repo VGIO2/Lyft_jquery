@@ -2,6 +2,7 @@ function init(){
     
     createList();
     
+    
     var li = $("li"); 
     li.each(function(){
        $(this).click(onTypeClick); 
@@ -22,7 +23,7 @@ function createList() {
     var listCars = $("#eleccion");
     
     for(var i in cars){
-        var carsHtml = '<li id="'+i+'"><div class="row"><div class="col-xs-3"><img class="img-responsive car" src="'+cars[i].image+'" alt=""></div><div class="col-xs-7"><h4>'+cars[i].nombre+'</h4><small>'+cars[i].description+'</small></div><div class="col-xs-2"><h4>'+cars[i].time+'</h4><small>min</small></div></div></li>';
+        var carsHtml = '<li id="'+i+'"><div class="row"><div class="col-xs-3"><img class="img-responsive car" src="'+cars[i].image+'" alt=""></div><div class="col-xs-7"><h4>'+cars[i].nombre+'</h4><small>'+cars[i].description+'</small></div><div class="col-xs-2 time"><h4>'+cars[i].time+'</h4><small>min</small></div></div></li>';
         
         listCars.append(carsHtml);
     }

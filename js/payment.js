@@ -19,6 +19,7 @@ function solicitarDriver(){
 function update(_info){
     $('#driver').attr('src',_info.conductor.url);
     $('#name_driver').html(_info.conductor.name);
-    
+    $("#dolar").text(_info.estimado.moneda);
+    $("#cobro").text(_info.estimado.min);
 }
 

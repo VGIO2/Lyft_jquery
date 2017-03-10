@@ -18,6 +18,10 @@ margin-bottom: 50px;
 .car {
     width: 100px;
     margin-top: 38%;
+    margin-left: 15px;
+}
+.time{
+    padding-left: 8px;
 }
 .dropup {
  background-color: #fff;
