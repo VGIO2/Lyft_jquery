@@ -1,28 +1,65 @@
+/** {outline: 1px solid blue;
+}*/
+
 .seleccionado{
-    width: 100%;
-    background-color: #eaecf0;
+    width: 96%;
     position: absolute;
     margin: 0;
     bottom: 60px;
-    margin-left: 5px;
-    padding: 0;
-    border-radius: 10px;
-    display: block;
+    margin-left: 8px;
+}
+.cuadro_gris{
+    background-color: #f3f3f5;
+    border: solid yellow 1px;
+}
+.cuadro_car1{
+    border-bottom: solid 1px lightgray;
+}
+.tipo{
+    display: inline;
+    margin: 0;
+    position: relative;
+    float: left;
+    border-right: solid 1px lightgray;
+}
+.mastercard{
+    margin-bottom: -20%;
+    margin-left: 30px;
+}
+.border-right{
+    border-right: 1px solid #c3c3c3;
+}
+.personal1{
+    margin-left: 50px;
+}
+/****      *************/
+
+.cuadro_blanco{
+    background-color: #fff;
+}
+.azul, .rosa{
+    border-radius: 100%;
+    background-color: blue;
+    width: 8px;
+    height: 8px;
+}
+.rosa{
+    background-color: deeppink;
+}
+.listado ul{
+    text-decoration: none;
+    list-style: none;
+}
+.linea{
+    border-bottom: solid 1px lightgray;
+    margin-left: 20px;
+    width: 95%;
+}
+.circulos{
+    display:inline;
+    
     
 }
-
-/*.car_direction i{
-    font-size:10px;
-    background-color: transparent;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10
-}
-.direccion{
-    padding: 8px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-*/
-
 .btn-next {
     background-color:rgb(255,0,191);
     width: 100%;

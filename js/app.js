@@ -2,6 +2,11 @@ function init(){
     
 }
 
+var cars = '[{"nombre": "Line","time":"3", "image":"image/taxi1.png", "description":"Shared, 2 riders max"},'+
+'{"nombre": "Lyft","time":"3", "image":"image/taxi2.png" , "description":"4 seats"},'+
+'{"nombre": "Plus","time":"4", "image":"image/taxi3.png", "description":"6 seats"},'+
+'{"nombre": "Premier","time":"3", "image":"image/taxi4.png", "description":"High-end, 4 seats"}]';
+
 var map;
 
 function initMap() {
@@ -45,6 +50,9 @@ function initMap() {
         infowindow.open(map,pazPeru)
     })
 }
+
+
+
 
 function solicitarEstimado(){
      $.ajax({
