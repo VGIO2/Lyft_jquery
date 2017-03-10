@@ -4,6 +4,7 @@ var cars =[{"nombre":"Line","image":"image/taxi1.png","description":"Shared, 2 r
 
 function init(){
     solicitarEstimado();
+    solicitarDriver();
     
     
     var carImg = $(".cuadro_car1").find("img").attr("src","image/lyftcar.png");
@@ -67,23 +68,43 @@ function initMap() {
 }
 
 
-
+/*---------------------------------ESTIMADO------*/
 
 function solicitarEstimado(){
     $.ajax({
         url:"http://clientes.geekadvice.pe/api/estimado",
         data:{"tipo":1}
     }).success(function(_data){
-        console.log(_data.estimado); 
+      //console.log(_data.estimado); 
         update1(_data);
     });
     
 }
+
 function update1(_info){
-    $("#precio").text(_info.estimado.min);
-    $("#moneda").text(_info.estimado.moneda);
+    $("#cobro").text(_info.estimado.min);
+    $("#dolar").text(_info.estimado.moneda);
     $("#destino").text(_info.destino);
     $("#partida").text(_info.origen);
+}
+/*-----------------------------------CARRERA------*/
+
+function solicitarDriver(){
+    $.ajax({
+        url:"https://clientes.geekadvice.pe/api/carrera",
+        data:{tipo:1}
+        
+    }).success(function(_data){
+        //console.log(_data.estimado);
+        update2(_data);
+        
+    });
+}
+
+function update2(_info){
+    $('#driver').attr('src',_info.conductor.url);
+    $('#name_driver').html(_info.conductor.name);
+    
 }
 
 
